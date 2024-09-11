@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => 'ryanshoover/quicksilver-wpmu-db-clone',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => 'f186e779258983d19249b02b4d8be7291d216354',
+        'type' => 'quicksilver-script',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        'ryanshoover/quicksilver-wpmu-db-clone' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => 'f186e779258983d19249b02b4d8be7291d216354',
+            'type' => 'quicksilver-script',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'symfony/polyfill-php80' => array(
+            'pretty_version' => 'v1.31.0',
+            'version' => '1.31.0.0',
+            'reference' => '60328e362d4c2c802a54fcbf04f9d3fb892b4cf8',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/polyfill-php80',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'symfony/process' => array(
+            'pretty_version' => 'v5.4.40',
+            'version' => '5.4.40.0',
+            'reference' => 'deedcb3bb4669cae2148bc920eafd2b16dc7c046',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/process',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);

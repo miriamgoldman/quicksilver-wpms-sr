@@ -1,4 +1,4 @@
-Note that Pantheon's recent changes to [search-replace functionality](https://docs.pantheon.io/guides/multisite/search-replace/) for multisites should make this script unnecessary. If possible, use the platform functionality instead. You'll have a better time.
+Note that Pantheon's recent changes to [search-replace functionality](https://docs.pantheon.io/guides/multisite/search-replace/) for multisites should make this script unnecessary. If possible, use the platform functionality instead. You'll have a better time. This is intended as a backup if that method fails.
 
 # Quicksilver Script - WPMU Database Clone
 
@@ -6,7 +6,8 @@ Pantheon Quicksilver script designed to be run when a database is cloned from li
 
 The script will update the `wp_blogs` and `wp_site` table to match the new environment's base url.
 
-It will do a search-replace across all sites, replacing their individual URL with the new one.
+It will also update the respective `wp_options` table for each subsite. Note a full search and replace is not done - this can hang on large networks (200+). Those can be run on a per-site basis via terminus.
+
 
 ## Installation
 
@@ -20,8 +21,8 @@ It will do a search-replace across all sites, replacing their individual URL wit
             after:
             - type: webphp
                 description: Convert blog urls
-                script: private/scripts/wpmu-db-clone/wpmu-db-clone.php
+                script: private/scripts/quicksilver-wpms-sr/multisite.php
 
     ```
 
-4. Edit the `$domains` array in `wpmu-db-clone.php` to match your site's configuration.
+4. Edit the `$domains` array in `multisite.php` to match your site's configuration.
