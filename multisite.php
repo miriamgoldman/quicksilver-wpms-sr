@@ -12,7 +12,7 @@ if ( 'live' != $_POST[ 'to_environment' ] ) :
     echo 'Replacing domain names in wp_blogs table' . PHP_EOL;
 
     $domains = [
-        'live'    => 'sites.providence.edu',
+        'live'    => 'www.example.com',
         'default' => $env . '-' . $site . '.pantheonsite.io',
     ];
 
